@@ -10,4 +10,5 @@ security:
       clientSecret: acmesecret
       scope: read,write
       auto-approve-scopes: '.*'
-
+    authorization:
+      checkTokenAccess: 'permitAll()'
