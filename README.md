@@ -7,12 +7,16 @@ Get a token for the client:
 `curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=client_credentials`
 
 
-Get a token for the default user:
+Get a token for the default user using credentials:
 
 `curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=password -d scope=read -d username=user -d password=<see log>`
 
 Check status of a token:
 
 `curl acme:acmesecret@localhost:8080/oauth/check_token -d token=<>`
+
+Start an authentication: 
+
+`curl -v "user:<pw>@localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fsome_uri.com"`
 
 

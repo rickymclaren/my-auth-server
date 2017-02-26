@@ -12,3 +12,5 @@ security:
       auto-approve-scopes: '.*'
     authorization:
       checkTokenAccess: 'permitAll()'
+      tokenKeyAccess: 'permitAll()'
+
