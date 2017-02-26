@@ -1,0 +1,13 @@
+logging:
+  level:
+    root: INFO
+    org.springframework.security.oauth2: DEBUG
+
+security:
+  oauth2:
+    client:
+      clientId: acme
+      clientSecret: acmesecret
+      scope: read,write
+      auto-approve-scopes: '.*'
+
