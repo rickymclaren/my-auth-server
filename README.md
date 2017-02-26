@@ -11,5 +11,8 @@ Get a token for the default user:
 
 `curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=password -d scope=read -d username=user -d password=<see log>`
 
+Check status of a token:
 
-curl acme:acmesecret@localhost:8080/oauth/check_token -d token=<>
+`curl acme:acmesecret@localhost:8080/oauth/check_token -d token=<>`
+
+
