@@ -4,6 +4,7 @@ logging:
     org.springframework.security.oauth2: DEBUG
 
 security:
+  ignored: 'oauth/authorize'
   oauth2:
     client:
       clientId: acme

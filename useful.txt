@@ -1,3 +1,7 @@
 http://projects.spring.io/spring-security-oauth/docs/oauth2.html
 https://raymondhlee.wordpress.com/2014/12/21/implementing-oauth2-with-spring-security/
+http://stackoverflow.com/questions/39424176/spring-security-oauth2-insufficientauthenticationexception
+http://cscarioni.blogspot.co.uk/2013/04/pro-spring-security-and-oauth-2.html
+https://github.com/FrontierPsychiatrist/spring-oauth-example
+
 
