@@ -5,6 +5,9 @@ logging:
 
 security:
   # ignored: 'oauth/authorize'
+  user:
+    name: user
+    password: password
   oauth2:
     client:
       clientId: acme

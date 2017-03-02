@@ -9,7 +9,7 @@ Get a token for the client:
 
 Get a token for the default user using credentials:
 
-`curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=password -d scope=read -d username=user -d password=<see log>`
+`curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=password -d scope=read -d username=user -d password=password`
 
 Check status of a token:
 
@@ -18,7 +18,7 @@ Check status of a token:
 Start an authentication code flow. 
 This starts on the client which will redirect to the auth server to login and consent to access. 
 
-`curl -v "user:<pw>@localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com"`
+`curl -v "user:password@localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com"`
 
 It redirects the browser back to the client with a code:
 
