@@ -6,6 +6,7 @@ http://stackoverflow.com/questions/39424176/spring-security-oauth2-insufficienta
 http://cscarioni.blogspot.co.uk/2013/04/pro-spring-security-and-oauth-2.html
 https://github.com/FrontierPsychiatrist/spring-oauth-example
 https://piotrminkowski.wordpress.com/2017/02/22/microservices-security-with-oauth2/
+http://tutorials.jenkov.com/oauth2/endpoints.html
 
 google for "spring oauth flow" and switch to images:
 http://presos.dsyer.com/decks/oauth-rest.html#slide1
