@@ -13,7 +13,8 @@ Spring exposes the following URLs:
 
 ---
 
-Start an authentication code flow (GET /oauth/authorize): 
+### Start an authentication code flow (GET /oauth/authorize) 
+
 This starts on the client which will redirect to the auth server to login and consent to access. 
 
 `curl -v "user:password@localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com"`
@@ -32,18 +33,18 @@ This finally returns an access token e.g.
 
 ---
 
-Alternate methods of getting and checking a token are:
+### Alternate methods of getting and checking a token are:
 
-Get a token for the client (POST /oauth/token):
+##### Get a token for the client (POST /oauth/token):
 
 `curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=client_credentials`
 
 
-Get a token for the default user using credentials (POST /oauth/token):
+##### Get a token for the default user using credentials (POST /oauth/token):
 
 `curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=password -d scope=read -d username=user -d password=password`
 
-Check status of a token (POST /oauth/check_token):
+##### Check status of a token (POST /oauth/check_token):
 
 `curl acme:acmesecret@localhost:8080/oauth/check_token -d token=<>`
 
