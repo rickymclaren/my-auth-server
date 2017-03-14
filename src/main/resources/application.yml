@@ -13,7 +13,7 @@ security:
       clientId: acme
       clientSecret: acmesecret
       scope: read,write
-      auto-approve-scopes: '.*'
+      # auto-approve-scopes: '.*'
     authorization:
       checkTokenAccess: 'permitAll()'
       tokenKeyAccess: 'permitAll()'

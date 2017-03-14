@@ -48,4 +48,20 @@ This finally returns an access token e.g.
 
 `curl acme:acmesecret@localhost:8080/oauth/check_token -d token=<>`
 
+---
+
+### Web based approval
+
+Comment out the auto-approve-scopes and put the following url in a browser:
+
+`localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com`
+
+Log in as user:password and you will see a confirmation screen asking you to confirm access (/oauth/confirm_access).
+
+This will post back to /oauth/authorize which will redirect you to the redirect_uri with a code which can be exchanged for an access token as before.
+
+If you do not grant access you wil be redirected to
+
+`http://my_client.com/?error=access_denied&error_description=User%20denied%20access`
+
 
