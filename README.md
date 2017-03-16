@@ -20,15 +20,21 @@ Spring exposes the following URLs:
 
 This starts on the client which will redirect to the auth server (GET /oauth/authorize) to login and consent to access. 
 
-`curl -v "user:password@localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com"`
+```
+curl -v "user:password@localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com"
+```
 
 It redirects the browser back to the client with a code:
 
-`Location: http://my_client.com?code=goYE8e`
+```
+Location: http://my_client.com?code=goYE8e
+```
 
 The client will then exchange the code for a token (POST /oauth/token):
 
-`curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=authorization_code -d redirect_uri=http%3A%2F%2Fmy_client.com -d code=<>`
+```
+curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=authorization_code -d redirect_uri=http%3A%2F%2Fmy_client.com -d code=<>
+```
 
 This finally returns an access token e.g.
 
@@ -48,16 +54,22 @@ This finally returns an access token e.g.
 
 ##### Get a token for the client (POST /oauth/token):
 
-`curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=client_credentials`
+```
+curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=client_credentials
+```
 
 
 ##### Get a token for the default user using credentials (POST /oauth/token):
 
-`curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=password -d scope=read -d username=user -d password=password`
+```
+curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=password -d scope=read -d username=user -d password=password
+```
 
 ##### Check status of a token (POST /oauth/check_token):
 
-`curl acme:acmesecret@localhost:8080/oauth/check_token -d token=<>`
+```
+curl acme:acmesecret@localhost:8080/oauth/check_token -d token=<>
+```
 
 ---
 
@@ -65,7 +77,9 @@ This finally returns an access token e.g.
 
 Comment out the auto-approve-scopes and put the following url in a browser:
 
-`localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com`
+```
+localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com
+```
 
 Log in as user:password and you will see a confirmation screen asking you to confirm access (/oauth/confirm_access).
 
@@ -73,6 +87,8 @@ This will post back to /oauth/authorize which will redirect you to the redirect_
 
 If you do not grant access you wil be redirected to
 
-`http://my_client.com/?error=access_denied&error_description=User%20denied%20access`
+```
+http://my_client.com/?error=access_denied&error_description=User%20denied%20access
+```
 
 
