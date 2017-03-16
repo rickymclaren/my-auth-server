@@ -16,9 +16,9 @@ Spring exposes the following URLs:
 
 ---
 
-### Start an authentication code flow (GET /oauth/authorize) 
+### Start an authentication code flow 
 
-This starts on the client which will redirect to the auth server to login and consent to access. 
+This starts on the client which will redirect to the auth server (GET /oauth/authorize) to login and consent to access. 
 
 `curl -v "user:password@localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com"`
 
@@ -32,7 +32,15 @@ The client will then exchange the code for a token (POST /oauth/token):
 
 This finally returns an access token e.g.
 
-`{"access_token":"843aaecb-4230-4fbb-bfaa-6a9bf36b7977","token_type":"bearer","refresh_token":"abf846db-e77f-4688-986d-1c723ba60454","expires_in":43199,"scope":"read write"}`
+```json
+{
+     "access_token": "843aaecb-4230-4fbb-bfaa-6a9bf36b7977",
+     "token_type": "bearer",
+     "refresh_token": "abf846db-e77f-4688-986d-1c723ba60454",
+     "expires_in": 43199,
+     "scope": "read write"
+ }
+ ```
 
 ---
 
