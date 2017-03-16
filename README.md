@@ -78,7 +78,7 @@ curl acme:acmesecret@localhost:8080/oauth/check_token -d token=<>
 Comment out the auto-approve-scopes and put the following url in a browser:
 
 ```
-localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com
+localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com&scope=read
 ```
 
 Log in as user:password and you will see a confirmation screen asking you to confirm access (/oauth/confirm_access).
