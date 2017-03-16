@@ -39,7 +39,7 @@ This finally returns an access token e.g.
      "refresh_token": "abf846db-e77f-4688-986d-1c723ba60454",
      "expires_in": 43199,
      "scope": "read write"
- }
+}
  ```
 
 ---
