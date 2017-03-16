@@ -4,8 +4,8 @@ Using this to investigate how spring boot configures the Oauth2 Authentication S
 
 Spring exposes the following URLs:
 * GET /oauth/authorize
-* POST /oauth/authorize
-* GET /oauth/token
+* POST /oauth/authorize - web based consent posts here
+* GET /oauth/token - synonym for POST, disabled by default.
 * POST /oauth/token
 * GET /oauth/check_token
 * GET /oauth/confirm_access
