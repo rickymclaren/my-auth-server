@@ -3,13 +3,14 @@
 Using this to investigate how spring boot configures the Oauth2 Authentication Server
 
 Spring exposes the following URLs:
-* GET /oauth/authorize
-* POST /oauth/authorize - web based consent posts here, otherwise a synonym for GET
-* GET /oauth/token - synonym for POST, disabled by default.
-* POST /oauth/token
-* GET /oauth/check_token
-* GET /oauth/confirm_access - presents web consent page
-* GET /oauth/error
+| ------------------------- | --------------------------------------------------------- |
+| GET /oauth/authorize      | Ask for an authorisation code.                            |
+| POST /oauth/authorize     | web based consent posts here, otherwise a synonym for GET |
+| GET /oauth/token          | synonym for POST, disabled by default                     |
+| POST /oauth/token         | exchange an authorisation code for an access token        |
+| GET /oauth/check_token    | get the details of a token                                |
+| GET /oauth/confirm_access | presents web consent page                                 |
+| GET /oauth/error          | ???                                                       |
 
 ---
 
