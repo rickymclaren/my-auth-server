@@ -3,6 +3,8 @@
 Using this to investigate how spring boot configures the Oauth2 Authentication Server
 
 Spring exposes the following URLs:
+
+| Endpoint                  | Description                                               |
 | ------------------------- | --------------------------------------------------------- |
 | GET /oauth/authorize      | Ask for an authorisation code.                            |
 | POST /oauth/authorize     | web based consent posts here, otherwise a synonym for GET |
