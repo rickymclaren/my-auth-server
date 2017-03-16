@@ -91,4 +91,22 @@ If you do not grant access you wil be redirected to
 http://my_client.com/?error=access_denied&error_description=User%20denied%20access
 ```
 
+### Filter Chain
+
+The security filter chain is set up as follows:
+
+```
+filters = {ArrayList@6102}  size = 11
+ 0 = {WebAsyncManagerIntegrationFilter@6107} 
+ 1 = {SecurityContextPersistenceFilter@6108} 
+ 2 = {HeaderWriterFilter@6109} 
+ 3 = {LogoutFilter@6110} 
+ 4 = {BasicAuthenticationFilter@6111} 
+ 5 = {RequestCacheAwareFilter@6112} 
+ 6 = {SecurityContextHolderAwareRequestFilter@6113} 
+ 7 = {AnonymousAuthenticationFilter@6114} 
+ 8 = {SessionManagementFilter@6115} 
+ 9 = {ExceptionTranslationFilter@6116} 
+ 10 = {FilterSecurityInterceptor@6117} 
+``` 
 
