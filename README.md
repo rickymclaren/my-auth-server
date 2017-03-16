@@ -7,11 +7,11 @@ Spring exposes the following URLs:
 | Endpoint                  | Description                                               |
 | ------------------------- | --------------------------------------------------------- |
 | GET /oauth/authorize      | Ask for an authorisation code.                            |
-| POST /oauth/authorize     | web based consent posts here, otherwise a synonym for GET |
-| GET /oauth/token          | synonym for POST, disabled by default                     |
-| POST /oauth/token         | exchange an authorisation code for an access token        |
-| GET /oauth/check_token    | get the details of a token                                |
-| GET /oauth/confirm_access | presents web consent page                                 |
+| POST /oauth/authorize     | Web based consent posts here, otherwise a synonym for GET |
+| GET /oauth/token          | Synonym for POST, disabled by default                     |
+| POST /oauth/token         | Exchange an authorisation code for an access token        |
+| GET /oauth/check_token    | Get the details of a token                                |
+| GET /oauth/confirm_access | Presents web consent page                                 |
 | GET /oauth/error          | ???                                                       |
 
 ---
@@ -32,7 +32,7 @@ The client will then exchange the code for a token (POST /oauth/token):
 
 This finally returns an access token e.g.
 
-'{"access_token":"843aaecb-4230-4fbb-bfaa-6a9bf36b7977","token_type":"bearer","refresh_token":"abf846db-e77f-4688-986d-1c723ba60454","expires_in":43199,"scope":"read write"}'
+`{"access_token":"843aaecb-4230-4fbb-bfaa-6a9bf36b7977","token_type":"bearer","refresh_token":"abf846db-e77f-4688-986d-1c723ba60454","expires_in":43199,"scope":"read write"}`
 
 ---
 
