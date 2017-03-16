@@ -8,7 +8,7 @@ Spring exposes the following URLs:
 * GET /oauth/token - synonym for POST, disabled by default.
 * POST /oauth/token
 * GET /oauth/check_token
-* GET /oauth/confirm_access
+* GET /oauth/confirm_access - presents web consent page
 * GET /oauth/error
 
 ---
