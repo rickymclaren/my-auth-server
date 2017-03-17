@@ -18,7 +18,10 @@ Spring exposes the following URLs:
 
 ### Start an authentication code flow 
 
-This starts on the client which will redirect to the auth server (GET /oauth/authorize) to login and consent to access. 
+This starts on the client which will redirect to the auth server (GET /oauth/authorize) to login and consent to access.
+ 
+Note: These examples do not request a specific scope which seems to be interpreted as requesting all scopes.
+You can pass specific scopes using the scope parameter.
 
 ```
 curl -v "user:password@localhost:8080/oauth/authorize?client_id=acme&response_type=code&redirect_uri=http%3A%2F%2Fmy_client.com"
