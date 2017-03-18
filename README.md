@@ -50,6 +50,14 @@ This finally returns an access token e.g.
      "scope": "read write"
 }
  ```
+ 
+ When the acces token expires we can get a new one using the refresh token.
+ 
+```
+curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=refresh_token  -d refresh_token=f08369d7-f14c-43bd-91c5-3281777bc047
+```
+
+Interestingly the new token still has the same refresh token. 
 
 ---
 
