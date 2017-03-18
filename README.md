@@ -57,7 +57,17 @@ This finally returns an access token e.g.
 curl acme:acmesecret@localhost:8080/oauth/token -d grant_type=refresh_token  -d refresh_token=f08369d7-f14c-43bd-91c5-3281777bc047
 ```
 
-Interestingly the new token still has the same refresh token. 
+Interestingly the new token still has the same refresh token.
+ 
+```
+{
+    "access_token": "bb8500e8-717c-44ba-acb8-68616e0f7e2e",
+    "token_type": "bearer",
+    "refresh_token": "f08369d7-f14c-43bd-91c5-3281777bc047",
+    "expires_in": 43199,
+    "scope": "read write"
+}
+```
 
 ---
 
