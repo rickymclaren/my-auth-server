@@ -1,5 +1,6 @@
 package com.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -7,6 +8,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.token.TokenStore;
+import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
+
+import javax.sql.DataSource;
 
 @SpringBootApplication
 @EnableAuthorizationServer
@@ -16,9 +21,12 @@ public class MyAuthServerApplication { //extends AuthorizationServerConfigurerAd
 		SpringApplication.run(MyAuthServerApplication.class, args);
 	}
 
-//    @Override
-//    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-//	    super.configure(security);
-//        security.checkTokenAccess("permitAll()");
-//    }
+	@Autowired
+	DataSource dataSource;
+
+	@Bean
+	TokenStore tokenStore(DataSource dataSource) {
+		return new JdbcTokenStore(dataSource);
+	}
+
 }

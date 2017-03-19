@@ -1,7 +1,12 @@
 logging:
   level:
-    root: INFO
+    root: DEBUG
     org.springframework.security.oauth2: DEBUG
+
+spring:
+  h2.console:
+    enabled: true
+    path: "/h2"
 
 security:
   # ignored: 'oauth/authorize'
