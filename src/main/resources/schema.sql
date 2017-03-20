@@ -14,8 +14,8 @@ create table oauth_refresh_token (
   authentication LONGVARBINARY
 );
 
-create table oauth_code (
-  code VARCHAR(256), authentication LONGVARBINARY
-);
+--- create table oauth_code (
+---   code VARCHAR(256), authentication LONGVARBINARY
+--- );
 
 
