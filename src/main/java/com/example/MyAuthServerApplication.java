@@ -50,4 +50,10 @@ public class MyAuthServerApplication extends AuthorizationServerConfigurerAdapte
 		clients
 				.jdbc(dataSource);
 	}
+
+	@Override
+	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+		security
+				.checkTokenAccess("permitAll()");
+	}
 }
