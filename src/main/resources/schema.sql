@@ -71,12 +71,16 @@ insert into oauth_client_details(
   scope,
   autoapprove,
   authorized_grant_types,
-  web_server_redirect_uri
+  web_server_redirect_uri,
+  access_token_validity,
+  refresh_token_validity
 ) values (
   'acme',
   'acmesecret',
   'read, write',
   '.*',
-  'client_credentials,authorization_code',
-  'http://my_client.com'
+  'client_credentials,authorization_code,refresh_token',
+  'http://my_client.com',
+  300,
+  30000
 );
