@@ -77,7 +77,7 @@ insert into oauth_client_details(
 ) values (
   'acme',
   'acmesecret',
-  'read, write',
+  'read,write',
   '.*',
   'client_credentials,authorization_code,refresh_token',
   'http://my_client.com',
