@@ -2,6 +2,7 @@
 
 Using this to investigate how spring boot configures the Oauth2 Authentication Server
 
+
 Spring exposes the following URLs:
 
 | Endpoint                  | Description                                               |
